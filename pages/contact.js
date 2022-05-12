@@ -15,6 +15,7 @@ const Contact = () => {
   useEffect(() => {
     setLoading(true)
     setTimeout(() => {
+      
       setLoading(false)
     }, 500)
   }, [])
@@ -29,7 +30,7 @@ const Contact = () => {
     'Ey1_bNAVtEO9JAo7Q').then((res)=>{
       console.log(res);
      
-      
+
     }).catch((err)=>console.log(err))
 
 
