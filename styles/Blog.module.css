@@ -1,0 +1,19 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main h2{
+    cursor: pointer;
+}
+.main p{
+    max-width: 45vw;
+}
+
+@media only screen and (max-width: 600px) {
+    .main p{
+        max-width: 90vw;
+    }
+  }
+  

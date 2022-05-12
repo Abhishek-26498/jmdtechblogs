@@ -1,0 +1,30 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.p {
+    max-width: 65vw;
+}
+
+@media only screen and (max-width: 600px) {
+    .main {
+        max-width: 95vw;
+    }
+
+    .p {
+        max-width: 95vw;
+    }
+
+    .wrapper {
+        margin: 8px 15px;
+    }
+
+    .skelton {
+        max-width: 52vw;
+        margin: auto;
+        width: 194px;
+    }
+}
