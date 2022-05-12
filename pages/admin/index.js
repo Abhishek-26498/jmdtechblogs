@@ -9,7 +9,7 @@ const Index = ({ blogs }) => {
     const handleDelete = async (id) => {
         try {
             const res = await axios.delete(
-                "http://localhost:3000/api/blogs/" + id)
+                "/api/blogs/" + id)
             setBlog(blog.filter((b) => b._id !== id));
             toast.success("Deleted", {
                 position: "top-center"
@@ -64,7 +64,7 @@ export const getServerSideProps = async (ctx) => {
             },
         }
     }
-    const res = await axios.get("http://localhost:3000/api/blogs")
+    const res = await axios.get("/api/blogs")
     return {
         props: {
             blogs: res.data,

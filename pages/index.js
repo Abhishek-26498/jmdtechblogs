@@ -69,7 +69,7 @@ export async function getServerSideProps(ctx) {
   if (myCookie.token === process.env.TOKEN) {
     admin = true
   }
-  const res = await fetch('http://localhost:3000/api/blogs')
+  const res = await fetch('/api/blogs')
   const data = await res.json()
   return {
     props: { data, admin },

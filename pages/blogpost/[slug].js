@@ -51,7 +51,7 @@ const Slug = ({data,slug}) => {
 export async function getServerSideProps(params) {
   const  slug  = params.query;
 
-  const res = await fetch(`http://localhost:3000/api/blogs?slug=${slug}`)
+  const res = await fetch(`/api/blogs?slug=${slug}`)
   const data = await res.json()
   // console.log(data)
   return {

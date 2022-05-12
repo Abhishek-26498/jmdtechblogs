@@ -15,7 +15,7 @@ const Contact = () => {
   useEffect(() => {
     setLoading(true)
     setTimeout(() => {
-      
+
       setLoading(false)
     }, 500)
   }, [])
@@ -39,7 +39,7 @@ const Contact = () => {
 
     const data = {phone, name, email, message}
 
-    fetch('http://localhost:3000/api/contact ', {
+    fetch('/api/contact ', {
       method: 'POST', // or 'PUT'
       headers: {
         'Content-Type': 'application/json',
