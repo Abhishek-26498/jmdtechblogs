@@ -14,8 +14,8 @@ console.log( process.env.ADMIN_PASSWORD)
     // const pswd = process.env.ADMIN_PASSWORD;
 
     if (
-      username === Abhi123 &&
-      password === abhi123_
+      username === process.env.ADMIN_USERNAME &&
+      password === process.env.ADMIN_PASSWORD
     ) {
         
       res.setHeader(
