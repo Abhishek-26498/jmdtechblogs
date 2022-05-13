@@ -38,8 +38,8 @@ const Contact = () => {
     console.log(phone, name, phone, message)
 
     const data = {phone, name, email, message}
-
-    fetch('/api/contact ', {
+    const { URL } = process.env;
+    fetch(URL+'/api/contact ', {
       method: 'POST', // or 'PUT'
       headers: {
         'Content-Type': 'application/json',
