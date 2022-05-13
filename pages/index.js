@@ -45,7 +45,7 @@ export default function Home(props) {
                 <h1 className={styles.blog}>Popular Blogs</h1>
                 <div className={styles.wrapper}>
 
-                  {blog.slice(0, 3).map((blogitem) => {
+                  {blog.map((blogitem) => {
                     return <div key={blogitem.title}>
                       <Link href={`/blogpost/${blogitem.slug}`} passHref>
                         <h2>{blogitem.title}</h2></Link>
