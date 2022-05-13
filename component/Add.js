@@ -25,8 +25,8 @@ const Add = ({ setClose }) => {
     console.log(title, content, author, slug)
 
     const data = {title, content, author, slug}
-    const { URL } = process.env; 
-   await fetch(URL+'/api/blogs ', {
+   
+   await fetch('/api/blogs ', {
       method: 'POST', // or 'PUT'
       headers: {
         'Content-Type': 'application/json',
