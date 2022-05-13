@@ -64,7 +64,8 @@ export const getServerSideProps = async (ctx) => {
             },
         }
     }
-    const res = await axios.get("/api/blogs")
+    const { URL } = process.env;
+    const res = await axios.get(URL+"/api/blogs")
     return {
         props: {
             blogs: res.data,
