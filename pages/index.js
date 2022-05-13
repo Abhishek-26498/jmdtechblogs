@@ -47,7 +47,7 @@ export default function Home(props) {
 
                   {blog.slice(0, 3).map((blogitem) => {
                     return <div key={blogitem.title}>
-                      <Link href={`/blogpost/${blogitem.slug}`} passHref>
+                      <Link href={URL+`/blogpost/${blogitem.slug}`} passHref>
                         <h2>{blogitem.title}</h2></Link>
                       <p>{blogitem.content.substr(0, 150)}</p>
                     </div>
