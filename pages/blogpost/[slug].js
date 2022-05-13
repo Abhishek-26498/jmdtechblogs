@@ -50,8 +50,8 @@ const Slug = ({data,slug}) => {
 
 export async function getServerSideProps(params) {
   const  slug  = params.query;
-  const { URL } = process.env;
-  const res = await fetch(URL+`/api/blogs?slug=${slug}`)
+ 
+  const res = await fetch(`/api/blogs?slug=${slug}`)
   const data = await res.json()
   // console.log(data)
   return {
