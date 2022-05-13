@@ -7,9 +7,10 @@ import 'react-toastify/dist/ReactToastify.css';
 const Index = ({ blogs }) => {
     const [blog, setBlog] = useState(blogs)
     const handleDelete = async (id) => {
+        const { URL } = process.env;
         try {
             const res = await axios.delete(
-                "/api/blogs/" + id)
+                URL+ "/api/blogs/" + id)
             setBlog(blog.filter((b) => b._id !== id));
             toast.success("Deleted", {
                 position: "top-center"

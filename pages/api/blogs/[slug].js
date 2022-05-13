@@ -14,14 +14,17 @@ export default async function handler(req, res) {
             console.log(blogs)
             res.status(200).json(blogs)
         } catch (error) {
+            console.log(error)
             res.status(500).json(error);
         }
    }
    if (method === "PUT"){
        try {
            const blogs = await Blog.create(req.body);
+           console.log(blogs)
            res.status(201).json(blogs)
        } catch (error) {
+        console.log(error)
            res.status(500).json(error);
        }
    }
@@ -31,7 +34,9 @@ export default async function handler(req, res) {
            
     await Blog.deleteOne(id);
       res.status(200).json({sucess: true});
+      console.log(blogs)
     } catch (err) {
+        console.log(error)
       res.status(500).json(err);
        }
    }
