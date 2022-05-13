@@ -34,9 +34,10 @@ const Add = ({ setClose }) => {
       body: JSON.stringify(data),
       
     })
-    .then(response => response.json())
+    .then(response => response.json(data))
+    console.log(data)
     .then(data => {
-      
+      console.log(data)
       console.log('Success:', data);
       setTitle('')
       setContent('')
