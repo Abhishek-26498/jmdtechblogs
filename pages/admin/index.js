@@ -15,8 +15,10 @@ const Index = ({ blogs }) => {
             toast.success("Deleted", {
                 position: "top-center"
             });
+            console.log(res)
         } catch (err) {
-            toast.error("Wrong Credentials!", {
+            console.log(err)
+            toast.error("Something Wrong!", {
                 position: "top-center"
             });
         }
