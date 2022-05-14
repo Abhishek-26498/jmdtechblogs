@@ -34,7 +34,7 @@ const Add = ({ setClose }) => {
       body: JSON.stringify(data),
       
     })
-    .then(response => response.JSON(data))
+    .then(response => response.json(data))
     console.log(data)
     .then(data => {
       console.log(data)

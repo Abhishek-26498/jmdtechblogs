@@ -27,7 +27,7 @@ export default async function handler(req, res) {
   if (method === "DELETE"){
     try {
         
-   await Product.findByIdAndDelete(id);
+   await Blog.deleteOne(id);
    res.status(200).json("The product has been deleted!");
  } catch (err) {
    res.status(500).json(err);

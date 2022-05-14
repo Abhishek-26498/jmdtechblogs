@@ -34,7 +34,7 @@ export default async function handler(req, res) {
            
     await Blog.deleteOne(id);
       res.status(200).json({sucess: true});
-      console.log(blogs)
+      console.log(Blog)
     } catch (err) {
         console.log(error)
       res.status(500).json(err);
