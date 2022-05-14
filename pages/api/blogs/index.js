@@ -2,7 +2,9 @@ import dbConnect from '../../../util/mongo'
 import Blog from '../../../modals/Blog'
 
 export default async function handler(req, res) {
-  const {method} = req;
+    const {method,
+        query: { id },
+    } = req;
 
   dbConnect()
 
@@ -27,7 +29,7 @@ export default async function handler(req, res) {
   if (method === "DELETE"){
     try {
         
-   await Blog.findByIdAndDelete(id);
+   await Blog.deleteOne(id);
    res.status(200).json("The product has been deleted!");
  } catch (err) {
    res.status(500).json(err);
