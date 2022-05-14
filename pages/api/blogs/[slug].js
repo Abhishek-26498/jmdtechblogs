@@ -32,7 +32,7 @@ export default async function handler(req, res) {
    if (method === "DELETE"){
        try {
            
-    await Blog.deleteOne(id);
+    await Blog.findByIdAndDelete(id);
       res.status(200).json({sucess: true});
       console.log(Blog)
     } catch (err) {
