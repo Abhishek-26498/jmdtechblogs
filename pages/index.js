@@ -45,13 +45,14 @@ export default function Home(props) {
                 <h1 className={styles.blog}>Popular Blogs</h1>
                 <div className={styles.wrapper}>
 
-                  {blog.map(blogitem => (
+                  {blog.map(blogitem => {
+                    return(
                    <div key={blogitem._id}>
                       <Link href={`/blogpost/${blogitem.slug}`} passHref>
                         <h2>{blogitem.title}</h2></Link>
                       <p>{blogitem.content.substr(0, 150)}</p>
                     </div>
-                  ))}
+                  )})}
 
                 </div>
                 {!close && <Add setClose={setClose} />}

@@ -31,6 +31,7 @@ export default async function handler(req, res) {
         
    await Blog.deleteOne(id);
    res.status(200).json("The product has been deleted!");
+   console.log(res)
  } catch (err) {
    res.status(500).json(err);
     }
