@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react'
 import styles from '../../styles/BlogPost.module.css'
 import Skeleton from '@mui/material/Skeleton';
 import Stack from '@mui/material/Stack';
+import { useRouter } from 'next/router'
 
 const Slug = ({data,slug}) => {
+  const router = useRouter()
   const [blog, setBlog] = useState()
   const [loading, setLoading] = useState(false)
 
@@ -13,6 +15,9 @@ const Slug = ({data,slug}) => {
     if(!currentItem){
       console.log("no details for this blog")
     }
+    if (!router.isFallback && !blog?.title) {
+      console.log("something is wrong!")
+  }
     setBlog(currentItem)
     setLoading(true)
     setTimeout(() => {
