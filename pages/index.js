@@ -31,9 +31,9 @@ export default function Home(props) {
 
         <main className={styles.main}>
           {
-            loading ?
+            loading ?(
               <Variants animation="wave" />
-              :
+            ):
               <div>
                 {props.admin && <AddButton setClose={setClose} />}
                 <h1 className={styles.title} >
@@ -45,7 +45,7 @@ export default function Home(props) {
                 <h1 className={styles.blog}>Popular Blogs</h1>
                 <div className={styles.wrapper}>
 
-                  {blog.map((blogitem) => {
+                  {!loading && blog.map((blogitem) => {
                     return(
                     <>
                      <div key={blogitem._id}>
